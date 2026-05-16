@@ -1,3 +1,10 @@
+/*
+    Delete the file
+
+    remove(char * FileName);
+
+*/
+
 #include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>
@@ -10,13 +17,13 @@ int main()
 {
     char FileName[50];
     int fd = 0;
-    char Arr[BUFFERSIZE];
+    char Arr[BUFFERSIZE];          // *
     int iRet = 0, iCnt = 0, iCount = 0;
 
-    printf("Enter the file that you want to open\n");
+    printf("Enter the file that you want to open \n");
     scanf("%s",FileName);
-   
-    fd = open(FileName,O_RDONLY);
+
+    fd = open(FileName, O_RDONLY);
 
     while(1)
     {
@@ -25,19 +32,18 @@ int main()
         {
             break;
         }
-        for(iCnt = 0; iCnt < iRet ;iCnt++)
+        for(iCnt = 0; iCnt < iRet; iCnt++)
         {
-            if((Arr[iCnt] == 'A') || (Arr[iCnt] == 'E') || (Arr[iCnt] == 'I') ||(Arr[iCnt] == 'O') || (Arr[iCnt] == 'U')|| (Arr[iCnt] == 'a')|| (Arr[iCnt] == 'e')|| (Arr[iCnt] == 'i')|| (Arr[iCnt] == 'o')|| (Arr[iCnt] == 'u') )
+            if((Arr[iCnt] == 'A') || ( Arr[iCnt] == 'E') || ( Arr[iCnt] == 'I') || ( Arr[iCnt] == 'O') || ( Arr[iCnt] == 'U') || ( Arr[iCnt] == 'a') || ( Arr[iCnt] == 'e') || ( Arr[iCnt] == 'i') || ( Arr[iCnt] == 'o') || ( Arr[iCnt] == 'u'))
             {
                 iCount++;
             }
         }
     }
-   
-    printf("Number of vowels are : %d\n",iCount);
 
+    printf("Number of vowels are :  %d\n",iCount);
 
     close(fd);
-    
+
     return 0;
 }
