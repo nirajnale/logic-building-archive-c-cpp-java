@@ -5,7 +5,7 @@
 
 void DisplayI(int iNo)
 {
-    int iCnt = 1;
+     int iCnt = 1;
 
     while(iCnt <= iNo)
     {
