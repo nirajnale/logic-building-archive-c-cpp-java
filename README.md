@@ -6,7 +6,7 @@
 ![C++](https://img.shields.io/badge/C++-Object%20Oriented-orange)
 ![Java](https://img.shields.io/badge/Java-OOP-red)
 ![DSA](https://img.shields.io/badge/Data%20Structures-Algorithms-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+
 
 ---
 
