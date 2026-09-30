@@ -15,14 +15,14 @@ void InsertFirst(PPNODE Head, int no)
     newn->data = no;                           
     newn->next = NULL;
 
-    if(*Head == NULL)                           
+    if(*Head == NULL)                          
     {
         *Head = newn;                           
     }
     else
     {
-        newn->next = *Head;                     
-        *Head = newn;                           
+        newn->next = *Head;                    
+        *Head = newn;                          
     }
 }
 
@@ -31,7 +31,7 @@ void DisplayI(PNODE Head)
     while(Head != NULL)
     {
         printf("%d\t",Head->data);
-        Head = Head->next;
+        Head = Head->next; 
     }
 }
 
@@ -59,14 +59,14 @@ int CountI(PNODE Head)
 int main()
 {
     PNODE First = NULL;
-
+    
     InsertFirst(&First,50);
     InsertFirst(&First,40);
     InsertFirst(&First,30);
-    InsertFirst(&First,20);
-    InsertFirst(&First,10);
+    InsertFirst(&First,20);  
+    InsertFirst(&First,10); 
 
     DisplayR(First);
-    
+
     return 0;
 }
